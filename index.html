@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Роспись Квартир</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <h1>Роспись квартир</h1>        
+    </header>
+
+    <div class="hero-container">
+        <img src="./assets/images/hero.jpg" loading="lazy" alt="Фоновая картинка">
+    </div>
+
+    <section>
+        <h2>О нас</h2>
+        <p>Мы предлагаем услуги муральной живописи для квартир. Наши художники создадут уникальные и неповторимые картины, которые украсят ваш интерьер и подчеркнут его индивидуальность.</p>
+    </section>
+    <section>
+        <h2>Наши услуги</h2>
+        <ul>
+            <li>Муральная живопись стен</li>
+            <li>Индивидуальный дизайн</li>
+            <li>Консультации по выбору мотивов</li>
+        </ul>
+    </section>
+    <footer>
+        <p>© <span id="currentYear">2024</span> Муральные картины в квартирах. Все права защищены.</p>
+    </footer>
+    <script>
+    </script>
+    <script defer>
+        // Update the footer with the current year
+        const yearElement = document.getElementById("currentYear")
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear()
+        }
+    </script>
+</body>
+</html>
