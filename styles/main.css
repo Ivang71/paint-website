@@ -3,7 +3,8 @@ html, body {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+    /* font-family: Monsterrat, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; */
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -34,22 +35,28 @@ section {
     padding: 20px;
 }
 
-footer {
-    background-color: #333;
-    padding: 10px;
-    padding-top: 1000px;
+.hero-wrap {
     text-align: center;
 }
-
-.hero-container {
+.hero-img-wrap {
     z-index: -1000;
     position: relative;
     height: 100vh;
     overflow: hidden;
 }
 
-/* Style the hero image */
-.hero-container img {
+.hero-content {
+
+}
+
+.hero-img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-image{
     position: absolute;
     top: 0;
     left: 0;
@@ -58,22 +65,59 @@ footer {
     object-fit: cover;
 }
 
-.parallax {
+/* .parallax {
     background-image: url('../assets/images/hero.jpg');
     
     height: 75vh; 
     
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* padding: 100px 0; */
-}
+    padding: 100px 0;
+} */
 
-.hero-container::after {
-    content: '';
+.hero-content {
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.3);
+    top: 24%;
+    padding: 0 25px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.hero-header {
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 180%;
+    letter-spacing: -.05em;
+}
+
+@media (min-width: 768px) {
+    .hero-header {
+        font-size: 3rem;
+    }
+}
+
+.hero-text {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: -.02em;
+}
+
+.hero-action {
+    padding-top: 49px;
+}
+
+
+
+
+
+footer {
+    background-color: #333;
+    padding: 10px;
+    padding-top: 1000px;
+    text-align: center;
+}
