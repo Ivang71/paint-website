@@ -1,12 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
 html, body {
     color-scheme: dark light;
 }
 
 body {
-    /* font-family: Monsterrat, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; */
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+em {
+    font-style: normal;
 }
 
 header {
@@ -65,23 +80,12 @@ section {
     object-fit: cover;
 }
 
-/* .parallax {
-    background-image: url('../assets/images/hero.jpg');
-    
-    height: 75vh; 
-    
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 100px 0;
-} */
-
 .hero-content {
     position: absolute;
-    top: 24%;
+    top: 26%;
     padding: 0 25px;
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,13 +106,64 @@ section {
 
 .hero-text {
     font-weight: 500;
-    font-size: 17px;
+    font-size: 1.4rem;
     line-height: 130%;
     letter-spacing: -.02em;
 }
 
 .hero-action {
     padding-top: 49px;
+    color: #fff;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    height: 70px;
+    padding: 0 29px;
+    border-radius: 53px;
+    font-size: 20px;
+    line-height: 70px;
+    letter-spacing: -.04em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.btn_cta-fill {
+    position: absolute;
+    inset: 0;
+    background: black;
+    overflow: hidden;
+    border-radius: inherit;
+    transition: background .3s;
+}
+
+.btn_cta-title {
+    position: relative;
+    top: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.2rem;
+    line-height: 70px;
+    letter-spacing: -.04em;
+}
+
+.arrow-right {
+    position: relative;
+    margin: -1px 0 0 0.5em;
+    width: 18px;
+    height: 18px;
+    font-size: .9em;
+    transition: transform .4s;
+    vertical-align: middle;
+}
+
+.btn_cta-title {
+    color: white;
 }
 
 
